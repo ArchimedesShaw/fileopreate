@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-#RECIPY:"加工点位，X位置，Z位置，X运动速度,Z运动速度"
+#RECIPE:"加工点位，X位置，Z位置，X运动速度,Z运动速度"
 
 with open('recipe.txt', 'w', encoding='utf-8') as frecipe:
     frecipe.write('Point1,105,220,800,150\n')
@@ -9,7 +9,7 @@ with open('recipe.txt', 'w', encoding='utf-8') as frecipe:
 
     
 with open('recipe.txt', 'a', encoding='utf-8') as frecipe:
-    frecipe.write('Point4,105,220,800,150')
+    frecipe.write('Point4,105,220,800,150\n')
 
 with open('recipe.txt', 'r', encoding='utf-8') as frecipe:
     line = frecipe.readline()
@@ -18,7 +18,7 @@ with open('recipe.txt', 'r', encoding='utf-8') as frecipe:
         line = frecipe.readline()
 
 with open('recipe.txt', 'r', encoding='utf-8') as frecipe:
-    for i,line in enumerate(frecipe,1):
+    for i, line in enumerate(frecipe,1):
         line = line.strip()
         if not line:
             continue
